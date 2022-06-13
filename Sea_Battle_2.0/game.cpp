@@ -107,11 +107,12 @@ bool game::get_cbai_23()                    // Сложный правый ур�
   return cbai_23;
  }
 
-int game::if_win(ship &ship_1,ship &ship_2) // Вывод того кто победил
+// Вывод того кто победил
+int game::if_win(ship &ship_1,ship &ship_2) 
  {
   QMessageBox msg;
   QString str;
-  int ret=0;
+  int ret=0;                                // Никто не победил
   int csh_1;
   int csh_2;
   bool if_ai_1;
@@ -125,37 +126,40 @@ int game::if_win(ship &ship_1,ship &ship_2) // Вывод того кто поб
      str.setNum(r1.set_rec(ship_2.get_hod(),csh_2,ship_1.get_name()));
      msg.setText(ship_1.get_name()+QString::fromLocal8Bit(" Победил")+QString::fromLocal8Bit(" Счет:")+str);
      msg.exec();
-     ret=2;
+     ret=2;                                 // Победил ship_1
     }
   if (!csh_2)                               // Игрок справа убил все корабли противника?
     {
      str.setNum(r1.set_rec(ship_1.get_hod(),csh_1,ship_2.get_name()));
      msg.setText(ship_2.get_name()+QString::fromLocal8Bit(" Победил")+QString::fromLocal8Bit(" Счет:")+str);
      msg.exec();
-     ret=1;
+     ret=1;                                 // Победил ship_2
     }
-  return ret;
+  return ret;                               // 0 - Никто не победил, 
+                                            // 1 - Победил ship_2
+                                            // 2 - Победил ship_1
  }
 
 // Ход активного игрока
-int game::ai_step(ship &ship_1,ship &ship_2)
+int game::ai_step(ship &ship_1, ship &ship_2)
  {
   int ret=1;
-  if (hod==1)
+  // Анализ возможности передачи хода
+  if (hod==1)                               // Ход ship_2?
     {
-     if (get_cbai_11())
+     if (get_cbai_11())                     // Легкий?
        {
         ret=ai::ai_1(ship_1);
         if (ret==1)
           hod=2;
        }
-     if (get_cbai_12())
+     if (get_cbai_12())                     // Средний?
        {
         ret=ai::ai_2(ship_1);
         if (ret==1)
           hod=2;
        }
-     if (get_cbai_13())
+     if (get_cbai_13())                     // Трудный?
        {
         ret=ai::ai_3(ship_1);
         if (ret==1)
@@ -163,21 +167,22 @@ int game::ai_step(ship &ship_1,ship &ship_2)
        }
     }
 
-  if (hod==2)
+  // Анализ возможности передачи хода
+  if (hod==2)                               // Ход ship_1?
     {
-     if (get_cbai_21())
+     if (get_cbai_21())                     // Легкий?
        {
         ret=ai::ai_1(ship_2);
         if (ret==1)
           hod=1;
        }
-     if (get_cbai_22())
+     if (get_cbai_22())                     // Средний?
        {
         ret=ai::ai_2(ship_2);
         if (ret==1)
           hod=1;
        }
-     if (get_cbai_23())
+     if (get_cbai_23())                     // Трудный?
        {
         ret=ai::ai_3(ship_2);
         if (ret==1)
@@ -187,41 +192,46 @@ int game::ai_step(ship &ship_1,ship &ship_2)
   return ret;
  }
 
+// Передача хода при промахе
 void game::p_step(ship &ship_1,ship &ship_2,int x_coord,int y_coord)
  {
-  int r=0;
-  if (hod==1)
+  int r=0;                                                        // Считаем, что попал
+  if (hod==1)                                                     // Ход игрока 1?
     {
-     if (y_coord>0&&y_coord<=10&&x_coord>0&&x_coord<=10&&get_cbp_1())
+     if (y_coord>0 && y_coord<=10 && x_coord>0 && x_coord<=10 &&  // Клетка в поле И
+         get_cbp_1())                                             // ходит cbp_1?
        {
-        ship_1.step_inc();
-        r=ship_1.atck(x_coord,y_coord);
-        if (r==1)
+        ship_1.step_inc();                                        // Увеличить число ходов
+        r=ship_1.atck(x_coord,y_coord);                           // Результат атаки
+        if (r==1)                                                 // Промах?
           {
-           hod=2;
+           hod=2;                                                 // Передать ход игроку 2
           }
        }
     }
 
-  if (hod==2)
+  if (hod==2)                                                     // Ход игрока 2?
     {
-     if (y_coord>0&&y_coord<=10&&x_coord>12&&x_coord<=22&&get_cbp_2())
+     if (y_coord>0 && y_coord<=10 && x_coord>12 && x_coord<=22 && // Клетка в поле И
+         get_cbp_2())                                             // ходит cbp_2?
        {
-        r=ship_2.atck(x_coord-12,y_coord);
-        ship_1.step_inc();
-        if (r==1)
+        r=ship_2.atck(x_coord-12,y_coord);                        // Результат атаки
+        ship_1.step_inc();                                        // Увеличить номер хода
+        if (r==1)                                                 // Промах?
           {
-           hod=1;
+           hod=1;                                                 // Передать ход игроку 1
           }
        }
     }
  }
 
+// Задать номер хода
 void game::set_hod(int i)
  {
   hod=i;
  }
 
+// Прочитать номер хода
 int game::get_hod()
  {
   return hod;

@@ -38,14 +38,19 @@ class game: public QObject
    static bool get_cbai_22();
    static bool get_cbai_23();
    static void reset();
-   static int if_win(ship &ship_1,ship &ship_2);
-   //static void fight(ship &ship_1,ship &ship_2,int x_coord,int y_coord,pole *p);
-   static void p_step(ship &ship_1,ship &ship_2,int x_coord,int y_coord);
-   static void set_hod(int i);
-   static int get_hod();
+   static int if_win(ship &ship_1,ship &ship_2);  // 0 - Никто не победил,  
+                                                  // 1 - Победил ship_2
+                                                  // 2 - Победил ship_1
+   //static void fight(ship &ship_1, ship &ship_2,int x_coord,
+   //                    int y_coord,pole *p);
+   // Передача хода при промахе
+   static void p_step(ship &ship_1, ship &ship_2,
+                      int x_coord,int y_coord);
+   static void set_hod(int i);                    // Задать, чей ход
+   static int get_hod();                          // Узнать, чей ход
 
   public slots:
-   static int ai_step(ship &ship_1, ship &ship_2);
+   static int ai_step(ship &ship_1, ship &ship_2);// Ход активного игрока
  };
 
 #endif   // GAME_H

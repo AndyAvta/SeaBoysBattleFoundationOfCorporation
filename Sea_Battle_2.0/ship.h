@@ -33,9 +33,9 @@ class ship
    int valid(int x, int y);           // Проверка на принадлежность клетки полю.
    int getship();                     // Проверка остатка кораблей
    void ship_erase();                 // Удаление кораблей.
-   QString get_name();                //Получение имени игрока
-   void set_name(QString n_str);
-   unsigned int get_step();
+   QString get_name();                // Получение имени игрока
+   void set_name(QString n_str);      // Установка имени игрока
+   unsigned int get_step();           // Чтение номер хода
    void step_inc();                   // Инкремент номера шага
    int get_lh_x();                    // Последняя координата по x
    int get_lh_y();                    // Последняя координата по y

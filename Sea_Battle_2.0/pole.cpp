@@ -204,19 +204,19 @@ void pole::ppstep()
   pole::setEnabled(0);
 
   if (stop!=1)
-    air=game::ai_step(ship_1,ship_2);
-    update();
+    air=game::ai_step(ship_1, ship_2);
+  update();
   if (stop!=1)
     if (air!=1)
       QTimer::singleShot(700, this,  SLOT(ppstep()));
   pole::setEnabled(1);
  }
 
-void pole::pcvpc(ship &ship_1,ship &ship_2)
+void pole::pcvpc(ship &ship_1, ship &ship_2)
  {
   update();
   if (stop!=1)
-    if (game::if_win(ship_1,ship_2)==0)
+    if (game::if_win(ship_1, ship_2)==0)
       if (stop!=1)
         QTimer::singleShot(700, this,  SLOT(ai_step()));
         update();
@@ -224,24 +224,24 @@ void pole::pcvpc(ship &ship_1,ship &ship_2)
 
 void pole::pvpc()
  {
-  pole::setDisabled(1);
+  pole::setDisabled(1);                                          // Скрыть поле
   update();
-  if (game::if_win(ship_1,ship_2)==0)
+  if (game::if_win(ship_1, ship_2)==0)                           // 
     {
-     if (stop!=1)
+     if (stop!=1)                                                // Не стоп?
        {
-        if ((game::get_cbp_2()==0 && game::hod==2) ||
-          (game::get_cbp_1()==0 && game::hod==1))
+        if ((game::get_cbp_2()==0 && game::hod==2) ||            //
+            (game::get_cbp_1()==0 && game::hod==1))              //
           {
            if (game::if_win(ship_1,ship_2)==0)
              {
-              QTimer::singleShot(700, this,  SLOT(ai_step()));
+              QTimer::singleShot(700, this, SLOT(ai_step()));    // 
              }
-           else pole::setEnabled(1);
+           else pole::setEnabled(1);                             // Показать поле
           }
-         else pole::setEnabled(1);
+         else pole::setEnabled(1);                               // Показать поле
        }
-      else pole::setEnabled(1);
+      else pole::setEnabled(1);                                  // Показать поле
     }
   update();
  }
