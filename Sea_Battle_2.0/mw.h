@@ -35,20 +35,20 @@ class MW : public QMainWindow
    Ui::MWClass *ui;
 
   private slots:
-   void on_p_1_textChanged();                // Левый человек
-   void on_p_2_textChanged();                // Правый человек
-   void on_cbai_23_clicked(bool checked);    // Сложный правый уровень сложности
-   void on_cbai_22_clicked(bool checked);    // Средний правый уровень сложности
-   void on_cbai_21_clicked(bool checked);    // Лёгкий правый уровень сложности
-   void on_cbai_13_clicked(bool checked);    // Сложный левый уровень сложности
-   void on_cbai_12_clicked(bool checked);    // Средний левый уровень сложности
-   void on_cbai_11_clicked(bool checked);    // Лёгкий левый уровень сложности
-   void on_cbp_1_clicked(bool checked);      // Логин левый
-   void on_cbp_2_clicked(bool checked);      // Логин правый
-   void on_pushButton_clicked();             // Выйти
-   void on_pushButton_2_clicked();           // Рестарт
-   void on_pushButton_3_clicked();           // Бой
-   void on_pushButton_4_clicked();           // Рекорды
+   void on_p_1_textChanged();                /// Левый человек
+   void on_p_2_textChanged();                /// Правый человек
+   void on_cbai_23_clicked(bool checked);    /// Сложный правый уровень сложности
+   void on_cbai_22_clicked(bool checked);    /// Средний правый уровень сложности
+   void on_cbai_21_clicked(bool checked);    /// Лёгкий правый уровень сложности
+   void on_cbai_13_clicked(bool checked);    /// Сложный левый уровень сложности
+   void on_cbai_12_clicked(bool checked);    /// Средний левый уровень сложности
+   void on_cbai_11_clicked(bool checked);    /// Лёгкий левый уровень сложности
+   void on_cbp_1_clicked(bool checked);      /// Логин левый
+   void on_cbp_2_clicked(bool checked);      /// Логин правый
+   void on_pushButton_clicked();             /// Выйти
+   void on_pushButton_2_clicked();           /// Рестарт
+   void on_pushButton_3_clicked();           /// Бой
+   void on_pushButton_4_clicked();           /// Рекорды
  };
 
-#endif                                 // MW_H
+#endif                                 /// MW_H

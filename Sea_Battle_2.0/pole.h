@@ -30,12 +30,12 @@ class pole : public QFrame
    explicit pole(QWidget *parent = 0);
    virtual ~pole();
    void paintEvent(QPaintEvent *p);
-   void paintpole(QPainter &painter);  // прорисовка поля
-   void shipevent1(QPainter &painter); // прорисовка кораблей игрока для поля 1
-   void shipevent2(QPainter &painter); // прорисовка кораблей компьютера для поля 1
-   void shipevent3(QPainter &painter); // прорисовка кораблей игрока для поля 2
-   void shipevent4(QPainter &painter); // прорисовка кораблей компьютера для поля 2
-   void mousePressEvent(QMouseEvent *qmep);// перегрузка метода нажатия мыши
+   void paintpole(QPainter &painter);  /// прорисовка поля
+   void shipevent1(QPainter &painter); /// прорисовка кораблей игрока для поля 1
+   void shipevent2(QPainter &painter); /// прорисовка кораблей компьютера для поля 1
+   void shipevent3(QPainter &painter); /// прорисовка кораблей игрока для поля 2
+   void shipevent4(QPainter &painter); /// прорисовка кораблей компьютера для поля 2
+   void mousePressEvent(QMouseEvent *qmep);/// перегрузка метода нажатия мыши
    void pcvpc(ship &ship_1,ship &ship_2);
 
   protected:
@@ -48,7 +48,7 @@ class pole : public QFrame
    void ppstep();
    void pvpc();
    void ai_step();
-   //void p_step(ship &ship_1,ship &ship_2,int x_coord,int y_coord);
+   ///void p_step(ship &ship_1,ship &ship_2,int x_coord,int y_coord);
  };
 
-#endif                                 // POLE_H
+#endif                                 /// POLE_H

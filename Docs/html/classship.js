@@ -1,0 +1,25 @@
+var classship =
+[
+    [ "ship", "classship.html#a002c8f2eea35e3b4f0c8003850a782d4", null ],
+    [ "atck", "classship.html#a162327d8542455102577487c993577af", null ],
+    [ "get_hod", "classship.html#a652b7d65c2822a40043398794bc4b05d", null ],
+    [ "get_isai", "classship.html#a956dd96fc40a4879ab25f34abd3c847c", null ],
+    [ "get_lh_x", "classship.html#a3b916713ac54736a4175b0baa0eaa0f5", null ],
+    [ "get_lh_y", "classship.html#a33e1cd690d397aedd78bde2399c2c5d9", null ],
+    [ "get_name", "classship.html#adbce3fd90c5c7c7c91bec79c9126da69", null ],
+    [ "get_step", "classship.html#a0f500a5d9816d8052e001fd6013eeee9", null ],
+    [ "getship", "classship.html#aaac4036ff8a82ec034322b72d04900d5", null ],
+    [ "ifdesgor", "classship.html#a5bd9e57849ff29ee699891c6084ce73f", null ],
+    [ "ifdesver", "classship.html#aeeb7797b1739ee01181f023fdb02c476", null ],
+    [ "oprdl", "classship.html#a8ee9aebe392888b2cb73b81f0bee92aa", null ],
+    [ "prvk", "classship.html#aba28c9a4aee0c3a890154cd879a30d61", null ],
+    [ "rotation", "classship.html#a66ff8165d3d742a7ac9b9d4a2e778276", null ],
+    [ "set_isai", "classship.html#aa14e876b350fe17e18c87e552a298876", null ],
+    [ "set_name", "classship.html#a6c6da520a3d3e4e27da871f7a6c152d6", null ],
+    [ "setmas", "classship.html#a6e7292cae19c7c3b442813abedd32eb3", null ],
+    [ "setrandom", "classship.html#aa8659eb060c7a57a67b2ba2b7f56f5fe", null ],
+    [ "ship_erase", "classship.html#a3daa12f88a96a85ff50d56856156f6d4", null ],
+    [ "step_inc", "classship.html#a1176b65980ab0218016922400dcb534d", null ],
+    [ "valid", "classship.html#a260a9f74a3848db7ec5aa0dab045f8bb", null ],
+    [ "pole", "classship.html#a729cd7a02d1751671c9914337cd37a78", null ]
+];

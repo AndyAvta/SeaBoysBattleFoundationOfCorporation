@@ -24,7 +24,7 @@ pole::~pole()
   delete m_ui;
  }
 
-// перегрузка метода нажатия мыши
+/// перегрузка метода нажатия мыши
 void pole::mousePressEvent(QMouseEvent *qmep)
  {
   QPainter p;
@@ -77,104 +77,104 @@ void pole::paintEvent(QPaintEvent *p)
      shipevent3(painter);
  }
 
-// прорисовка кораблей игрока для поля 1
+/// прорисовка кораблей игрока для поля 1
 void pole::shipevent1(QPainter &painter)
  {
   for (int xc=1;xc<=10;xc++)
    for (int yc=1;yc<=10;yc++)
     {
-     if (ship_1.mas[xc][yc]>=1)                            // Клетка корабля ?
-       painter.fillRect(xc*20+1,yc*20+1,19,19,Qt::gray);   // Закрасить серым
-     if (ship_1.mas[xc][yc]==-1)                           // Промах ?
-       painter.fillRect(xc*20+9,yc*20+9,5,5,Qt::black);    // пометка клетки чёрным квадратиком
-     if (ship_1.mas[xc][yc]==2)                            // Подбит ?
+     if (ship_1.mas[xc][yc]>=1)                            /// Клетка корабля ?
+       painter.fillRect(xc*20+1,yc*20+1,19,19,Qt::gray);   /// Закрасить серым
+     if (ship_1.mas[xc][yc]==-1)                           /// Промах ?
+       painter.fillRect(xc*20+9,yc*20+9,5,5,Qt::black);    /// пометка клетки чёрным квадратиком
+     if (ship_1.mas[xc][yc]==2)                            /// Подбит ?
        {
-        // Рисование крестика
+        /// Рисование крестика
         painter.drawLine(xc*20,yc*20,(xc+1)*20,(yc+1)*20);
         painter.drawLine((xc+1)*20,yc*20,(xc)*20,(yc+1)*20);
        }
     }
  }
 
-// прорисовка кораблей компьютера для поля 1
+/// прорисовка кораблей компьютера для поля 1
 void pole::shipevent2(QPainter &painter)
  {
   for (int xc=1; xc<=10; xc++)
    for (int yc=1; yc<=10; yc++)
     {
-     if (ship_1.mas[xc][yc]==-1)                           // Промах ?
-       painter.fillRect(xc*20+9,yc*20+9,5,5,Qt::black);    // пометка клетки чёрным квадратиком
-     if (ship_1.mas[xc][yc]==2)                            // Подбит ?
+     if (ship_1.mas[xc][yc]==-1)                           /// Промах ?
+       painter.fillRect(xc*20+9,yc*20+9,5,5,Qt::black);    /// пометка клетки чёрным квадратиком
+     if (ship_1.mas[xc][yc]==2)                            /// Подбит ?
        {
-        painter.fillRect(xc*20+1,yc*20+1,19,19,Qt::gray);  // Закрасить серым квадрат корабля
-        // Рисование крестика
+        painter.fillRect(xc*20+1,yc*20+1,19,19,Qt::gray);  /// Закрасить серым квадрат корабля
+        /// Рисование крестика
         painter.drawLine(xc*20,yc*20,(xc+1)*20,(yc+1)*20);
         painter.drawLine((xc+1)*20,yc*20,(xc)*20,(yc+1)*20);
        }
     }
  }
 
-// прорисовка кораблей игрока для поля 2
+/// прорисовка кораблей игрока для поля 2
 void pole::shipevent3(QPainter &painter)
  {
   for (int xc=1; xc<=10; xc++)
    for (int yc=1; yc<=10; yc++)
     {
-     if (ship_2.mas[xc][yc]>=1)                                         // Клетка корабля ?
-       painter.fillRect(xc*20+1+xrast,yc*20+1,19,19,Qt::gray);          // Закрасить серым
-     if (ship_2.mas[xc][yc]==-1)                                        // Промах ?
-       painter.fillRect(xc*20+9+xrast,yc*20+9,5,5,Qt::black);           // пометка клетки чёрным квадратиком
-     if (ship_2.mas[xc][yc]==2)                                         // Подбит ?
+     if (ship_2.mas[xc][yc]>=1)                                         /// Клетка корабля ?
+       painter.fillRect(xc*20+1+xrast,yc*20+1,19,19,Qt::gray);          /// Закрасить серым
+     if (ship_2.mas[xc][yc]==-1)                                        /// Промах ?
+       painter.fillRect(xc*20+9+xrast,yc*20+9,5,5,Qt::black);           /// пометка клетки чёрным квадратиком
+     if (ship_2.mas[xc][yc]==2)                                         /// Подбит ?
        {
-        // Рисование крестика
+        /// Рисование крестика
         painter.drawLine(xc*20+xrast,yc*20,(xc+1)*20+xrast,(yc+1)*20);
         painter.drawLine((xc+1)*20+xrast,yc*20,(xc)*20+xrast,(yc+1)*20);
        }
     }
  }
 
-// прорисовка кораблей компьютера для поля 2
+/// прорисовка кораблей компьютера для поля 2
 void pole::shipevent4(QPainter &painter)
  {
   for (int xc=1; xc<=10; xc++)
    for (int yc=1; yc<=10; yc++)
     {
-     if (ship_2.mas[xc][yc]==-1)                                        // Промах ?
-       painter.fillRect(xc*20+9+xrast,yc*20+9,5,5,Qt::black);           // пометка клетки чёрным квадратиком
-     if (ship_2.mas[xc][yc]==2)                                         // Подбит ?
+     if (ship_2.mas[xc][yc]==-1)                                        /// Промах ?
+       painter.fillRect(xc*20+9+xrast,yc*20+9,5,5,Qt::black);           /// пометка клетки чёрным квадратиком
+     if (ship_2.mas[xc][yc]==2)                                         /// Подбит ?
        {
-        painter.fillRect(xc*20+1+xrast,yc*20+1,19,19,Qt::gray);         // Закрасить серым квадрат корабля
-        // Рисование крестика
+        painter.fillRect(xc*20+1+xrast,yc*20+1,19,19,Qt::gray);         /// Закрасить серым квадрат корабля
+        /// Рисование крестика
         painter.drawLine(xc*20+xrast,yc*20,(xc+1)*20+xrast,(yc+1)*20);
         painter.drawLine((xc+1)*20+xrast,yc*20,(xc)*20+xrast,(yc+1)*20);
        }
     }
  }
 
-// Прорисовка поля
+/// Прорисовка поля
 void pole::paintpole(QPainter &painter)
  {
   painter.setPen(Qt::black);
   painter.setFont(QFont("Arial", 12));
   int Xpl=20;
   QString ch;
-  painter.fillRect(0,0,Xpl*11,Xpl*11, Qt::white);           // очистка левого поля белом цветом
-  painter.fillRect(0+xrast,0,xrast-Xpl,Xpl*11, Qt::white);  // очистка правого поля белом цветом
-  for (int i=1; i<11; i++)                                    // для всех строк поля
+  painter.fillRect(0,0,Xpl*11,Xpl*11, Qt::white);           /// очистка левого поля белом цветом
+  painter.fillRect(0+xrast,0,xrast-Xpl,Xpl*11, Qt::white);  /// очистка правого поля белом цветом
+  for (int i=1; i<11; i++)                                    /// для всех строк поля
    {
-    ch.setNum(i);                                           // перевод i в строку
-    painter.drawText(1,Xpl*(i+1)-1,ch);                     // простановка номера строки левого поля
-    painter.drawText(1+xrast,Xpl*(i+1)-1,ch);               // простановка номера строки правого поля
+    ch.setNum(i);                                           /// перевод i в строку
+    painter.drawText(1,Xpl*(i+1)-1,ch);                     /// простановка номера строки левого поля
+    painter.drawText(1+xrast,Xpl*(i+1)-1,ch);               /// простановка номера строки правого поля
    }
-  // Прорисовка сетки
+  /// Прорисовка сетки
   for (int i=0; i<=Xpl*11; i+=Xpl)
    {
-    painter.drawLine(i, 0, i, Xpl*11);                     // x0 y0 x y Вертикальная I-тая линия левого поля
-    painter.drawLine(0,i,Xpl*11,i);                        // Горизонтальная I-тая линия левого поля
-    painter.drawLine(i+xrast, 0, i+xrast, Xpl*11);         // x0 y0 x y Вертикальная I-тая линия правого поля
-    painter.drawLine(0+xrast,i,Xpl*11+xrast,i);            // Горизонтальная I-тая линия правого поля
+    painter.drawLine(i, 0, i, Xpl*11);                     /// x0 y0 x y Вертикальная I-тая линия левого поля
+    painter.drawLine(0,i,Xpl*11,i);                        /// Горизонтальная I-тая линия левого поля
+    painter.drawLine(i+xrast, 0, i+xrast, Xpl*11);         /// x0 y0 x y Вертикальная I-тая линия правого поля
+    painter.drawLine(0+xrast,i,Xpl*11+xrast,i);            /// Горизонтальная I-тая линия правого поля
    }
-  // Заголовки столбцов левого поля
+  /// Заголовки столбцов левого поля
   painter.drawText(Xpl*1+1,Xpl-1,QString::fromLocal8Bit("а"));
   painter.drawText(Xpl*2+1,Xpl-1,QString::fromLocal8Bit("б"));
   painter.drawText(Xpl*3+1,Xpl-1,QString::fromLocal8Bit("в"));
@@ -185,7 +185,7 @@ void pole::paintpole(QPainter &painter)
   painter.drawText(Xpl*8+1,Xpl-1,QString::fromLocal8Bit("з"));
   painter.drawText(Xpl*9+1,Xpl-1,QString::fromLocal8Bit("и"));
   painter.drawText(Xpl*10+1,Xpl-1,QString::fromLocal8Bit("к"));
-  // Заголовки столбцов правого поля
+  /// Заголовки столбцов правого поля
   painter.drawText(Xpl*1+1+xrast,Xpl-1,QString::fromLocal8Bit("а"));
   painter.drawText(Xpl*2+1+xrast,Xpl-1,QString::fromLocal8Bit("б"));
   painter.drawText(Xpl*3+1+xrast,Xpl-1,QString::fromLocal8Bit("в"));
@@ -224,24 +224,24 @@ void pole::pcvpc(ship &ship_1, ship &ship_2)
 
 void pole::pvpc()
  {
-  pole::setDisabled(1);                                          // Скрыть поле
+  pole::setDisabled(1);                                          /// Скрыть поле
   update();
-  if (game::if_win(ship_1, ship_2)==0)                           // 
+  if (game::if_win(ship_1, ship_2)==0)
     {
-     if (stop!=1)                                                // Не стоп?
+     if (stop!=1)                                                //// Не стоп?
        {
-        if ((game::get_cbp_2()==0 && game::hod==2) ||            //
-            (game::get_cbp_1()==0 && game::hod==1))              //
+        if ((game::get_cbp_2()==0 && game::hod==2) ||
+            (game::get_cbp_1()==0 && game::hod==1))
           {
            if (game::if_win(ship_1,ship_2)==0)
              {
-              QTimer::singleShot(700, this, SLOT(ai_step()));    // 
+              QTimer::singleShot(700, this, SLOT(ai_step()));
              }
-           else pole::setEnabled(1);                             // Показать поле
+           else pole::setEnabled(1);                             /// Показать поле
           }
-         else pole::setEnabled(1);                               // Показать поле
+         else pole::setEnabled(1);                               /// Показать поле
        }
-      else pole::setEnabled(1);                                  // Показать поле
+      else pole::setEnabled(1);                                  /// Показать поле
     }
   update();
  }

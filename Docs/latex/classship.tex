@@ -1,0 +1,803 @@
+\hypertarget{classship}{}\doxysection{ship Class Reference}
+\label{classship}\index{ship@{ship}}
+
+
+{\ttfamily \#include $<$ship.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classship_a002c8f2eea35e3b4f0c8003850a782d4}{ship}} ()
+\item 
+void \mbox{\hyperlink{classship_aa14e876b350fe17e18c87e552a298876}{set\+\_\+isai}} (bool flag)
+\begin{DoxyCompactList}\small\item\em Установка данного поля для компьютера \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classship_a956dd96fc40a4879ab25f34abd3c847c}{get\+\_\+isai}} ()
+\begin{DoxyCompactList}\small\item\em Установка данного поля для компьютера \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classship_a6e7292cae19c7c3b442813abedd32eb3}{setmas}} ()
+\begin{DoxyCompactList}\small\item\em Проверка кому принадлежит поле \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classship_aa8659eb060c7a57a67b2ba2b7f56f5fe}{setrandom}} (int i)
+\begin{DoxyCompactList}\small\item\em Расстановка кораблей \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classship_a162327d8542455102577487c993577af}{atck}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Расстановка кораблей случайным образом \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classship_aeeb7797b1739ee01181f023fdb02c476}{ifdesver}} (int x, int y, int dl)
+\begin{DoxyCompactList}\small\item\em Метод для атаки корабля \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classship_a5bd9e57849ff29ee699891c6084ce73f}{ifdesgor}} (int x, int y, int dl)
+\begin{DoxyCompactList}\small\item\em Проверка уничтожен ли горизонтальный корабль \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classship_a8ee9aebe392888b2cb73b81f0bee92aa}{oprdl}} (int x, int y, int rot)
+\begin{DoxyCompactList}\small\item\em Проверка уничтожен ли вертикальный корабль \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classship_a66ff8165d3d742a7ac9b9d4a2e778276}{rotation}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Определение длины корабля \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classship_aba28c9a4aee0c3a890154cd879a30d61}{prvk}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Определение вертикальный/горизонтальный корабль \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classship_a260a9f74a3848db7ec5aa0dab045f8bb}{valid}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Проверка на правильность расстановки корабля \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classship_aaac4036ff8a82ec034322b72d04900d5}{getship}} ()
+\begin{DoxyCompactList}\small\item\em Проверка на принадлежность клетки полю. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classship_a3daa12f88a96a85ff50d56856156f6d4}{ship\+\_\+erase}} ()
+\begin{DoxyCompactList}\small\item\em Проверка остатка кораблей \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{classship_adbce3fd90c5c7c7c91bec79c9126da69}{get\+\_\+name}} ()
+\begin{DoxyCompactList}\small\item\em Удаление кораблей. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classship_a6c6da520a3d3e4e27da871f7a6c152d6}{set\+\_\+name}} (QString n\+\_\+str)
+\begin{DoxyCompactList}\small\item\em Получение имени игрока \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classship_a0f500a5d9816d8052e001fd6013eeee9}{get\+\_\+step}} ()
+\begin{DoxyCompactList}\small\item\em Установка имени игрока \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classship_a1176b65980ab0218016922400dcb534d}{step\+\_\+inc}} ()
+\begin{DoxyCompactList}\small\item\em Чтение номер хода \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classship_a3b916713ac54736a4175b0baa0eaa0f5}{get\+\_\+lh\+\_\+x}} ()
+\begin{DoxyCompactList}\small\item\em Инкремент номера шага \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classship_a33e1cd690d397aedd78bde2399c2c5d9}{get\+\_\+lh\+\_\+y}} ()
+\begin{DoxyCompactList}\small\item\em Последняя координата по x. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classship_a652b7d65c2822a40043398794bc4b05d}{get\+\_\+hod}} ()
+\begin{DoxyCompactList}\small\item\em Последняя координата по y. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classship_a729cd7a02d1751671c9914337cd37a78}{pole}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classship_a002c8f2eea35e3b4f0c8003850a782d4}\label{classship_a002c8f2eea35e3b4f0c8003850a782d4}} 
+\index{ship@{ship}!ship@{ship}}
+\index{ship@{ship}!ship@{ship}}
+\doxysubsubsection{\texorpdfstring{ship()}{ship()}}
+{\footnotesize\ttfamily ship\+::ship (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classship_a162327d8542455102577487c993577af}\label{classship_a162327d8542455102577487c993577af}} 
+\index{ship@{ship}!atck@{atck}}
+\index{atck@{atck}!ship@{ship}}
+\doxysubsubsection{\texorpdfstring{atck()}{atck()}}
+{\footnotesize\ttfamily int ship\+::atck (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Расстановка кораблей случайным образом 
+
+Метод для атаки корабля Результат Попадание
+
+Промах или подбита
+
+В эту клетку уже стреляли
+
+Клетка корабля ?
+
+Пометить как подбитыю клетку
+
+Уменьшить количество цкелых клеток
+
+Память координаты Очистка
+
+Память координаты Очистка
+
+Увелечение числа подбитых клеток
+
+Увелечение числа хода
+
+Горизонтальный корабль ?
+
+Пометить как подбитый
+
+Вертикальный корабль ?
+
+Пометить как подбитый
+
+Одиночный корабль ?
+
+Пометить пространсво вокруг одиночного корабля
+
+Допустимые координаты клетки ?
+
+Пометить выстрелом
+
+Допустимые координаты клетки ?
+
+Пометить выстрелом
+
+Допустимые координаты клетки ?
+
+Пометить выстрелом
+
+Допустимые координаты клетки ?
+
+Пометить выстрелом
+
+Допустимые координаты клетки ?
+
+Пометить выстрелом
+
+Допустимые координаты клетки ?
+
+Пометить выстрелом
+
+Допустимые координаты клетки ?
+
+Пометить выстрелом
+
+Допустимые координаты клетки ?
+
+Пометить выстрелом
+
+Память координаты Очистка
+
+Память координаты Очистка
+
+Увелечение числа подбитых клеток
+
+Пустая клетка ?
+
+Пометить выстрелом
+
+Промах
+
+Число подбитых
+
+Увеличить номер хода
+
+если 0 то попадение , если 1 то промах, -\/1 повторный выстрел\mbox{\Hypertarget{classship_a652b7d65c2822a40043398794bc4b05d}\label{classship_a652b7d65c2822a40043398794bc4b05d}} 
+\index{ship@{ship}!get\_hod@{get\_hod}}
+\index{get\_hod@{get\_hod}!ship@{ship}}
+\doxysubsubsection{\texorpdfstring{get\_hod()}{get\_hod()}}
+{\footnotesize\ttfamily int ship\+::get\+\_\+hod (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Последняя координата по y. 
+
+Получить ход \mbox{\Hypertarget{classship_a956dd96fc40a4879ab25f34abd3c847c}\label{classship_a956dd96fc40a4879ab25f34abd3c847c}} 
+\index{ship@{ship}!get\_isai@{get\_isai}}
+\index{get\_isai@{get\_isai}!ship@{ship}}
+\doxysubsubsection{\texorpdfstring{get\_isai()}{get\_isai()}}
+{\footnotesize\ttfamily bool ship\+::get\+\_\+isai (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Установка данного поля для компьютера 
+
+Проверка кому принадлежит поле Вернуть владельца поля\mbox{\Hypertarget{classship_a3b916713ac54736a4175b0baa0eaa0f5}\label{classship_a3b916713ac54736a4175b0baa0eaa0f5}} 
+\index{ship@{ship}!get\_lh\_x@{get\_lh\_x}}
+\index{get\_lh\_x@{get\_lh\_x}!ship@{ship}}
+\doxysubsubsection{\texorpdfstring{get\_lh\_x()}{get\_lh\_x()}}
+{\footnotesize\ttfamily int ship\+::get\+\_\+lh\+\_\+x (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Инкремент номера шага 
+
+Последняя координата по x. \mbox{\Hypertarget{classship_a33e1cd690d397aedd78bde2399c2c5d9}\label{classship_a33e1cd690d397aedd78bde2399c2c5d9}} 
+\index{ship@{ship}!get\_lh\_y@{get\_lh\_y}}
+\index{get\_lh\_y@{get\_lh\_y}!ship@{ship}}
+\doxysubsubsection{\texorpdfstring{get\_lh\_y()}{get\_lh\_y()}}
+{\footnotesize\ttfamily int ship\+::get\+\_\+lh\+\_\+y (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Последняя координата по x. 
+
+Последняя координата по y. \mbox{\Hypertarget{classship_adbce3fd90c5c7c7c91bec79c9126da69}\label{classship_adbce3fd90c5c7c7c91bec79c9126da69}} 
+\index{ship@{ship}!get\_name@{get\_name}}
+\index{get\_name@{get\_name}!ship@{ship}}
+\doxysubsubsection{\texorpdfstring{get\_name()}{get\_name()}}
+{\footnotesize\ttfamily QString ship\+::get\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Удаление кораблей. 
+
+Получение имени игрока \mbox{\Hypertarget{classship_a0f500a5d9816d8052e001fd6013eeee9}\label{classship_a0f500a5d9816d8052e001fd6013eeee9}} 
+\index{ship@{ship}!get\_step@{get\_step}}
+\index{get\_step@{get\_step}!ship@{ship}}
+\doxysubsubsection{\texorpdfstring{get\_step()}{get\_step()}}
+{\footnotesize\ttfamily unsigned int ship\+::get\+\_\+step (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Установка имени игрока 
+
+\mbox{\Hypertarget{classship_aaac4036ff8a82ec034322b72d04900d5}\label{classship_aaac4036ff8a82ec034322b72d04900d5}} 
+\index{ship@{ship}!getship@{getship}}
+\index{getship@{getship}!ship@{ship}}
+\doxysubsubsection{\texorpdfstring{getship()}{getship()}}
+{\footnotesize\ttfamily int ship\+::getship (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Проверка на принадлежность клетки полю. 
+
+Проверка остатка кораблей Вернуть число не подбитых клеток\mbox{\Hypertarget{classship_a5bd9e57849ff29ee699891c6084ce73f}\label{classship_a5bd9e57849ff29ee699891c6084ce73f}} 
+\index{ship@{ship}!ifdesgor@{ifdesgor}}
+\index{ifdesgor@{ifdesgor}!ship@{ship}}
+\doxysubsubsection{\texorpdfstring{ifdesgor()}{ifdesgor()}}
+{\footnotesize\ttfamily void ship\+::ifdesgor (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{dl }\end{DoxyParamCaption})}
+
+
+
+Проверка уничтожен ли горизонтальный корабль 
+
+проверка уничтожен ли вертикальный корабль Допустимые координаты клетки ?
+
+Клетка подбита ?
+
+Учёт подбитых клеток
+
+Новая ордината кормы корабля
+
+Допустимые координаты клетки ?
+
+Клетка подбита ?
+
+Учёт подбитых клеток
+
+Новая ордината кормы корабля
+
+Допустимые координаты клетки ?
+
+Клетка подбита ?
+
+Учёт подбитых клеток
+
+Новая ордината кормы корабля
+
+Допустимые координаты клетки ?
+
+Клетка подбита ?
+
+Учёт подбитых клеток
+
+Новая ордината кормы корабля
+
+Допустимые координаты клетки ?
+
+Клетка подбита ?
+
+Учёт подбитых клеток
+
+Новая ордината кормы корабля
+
+Допустимые координаты клетки ?
+
+Клетка подбита ?
+
+Учёт подбитых клеток
+
+Новая ордината кормы корабля
+
+Допустимые координаты клетки ?
+
+Клетка подбита ?
+
+Допустимые координаты клетки ?
+
+Клетка подбита ?
+
+Допустимые координаты клетки ?
+
+Клетка подбита ?
+
+Допустимые координаты клетки ?
+
+Клетка подбита ?
+
+Допустимые координаты клетки ?
+
+Клетка подбита ?
+
+Допустимые координаты клетки ?
+
+Клетка подбита ?
+
+Допустимые координаты клетки ?
+
+Клетка подбита ?
+
+Допустимые координаты клетки ?
+
+Клетка подбита ?
+
+Допустимые координаты клетки ?
+
+Клетка подбита ?
+
+Допустимые координаты клетки ?
+
+Клетка подбита ?
+
+Допустимые координаты клетки ?
+
+Клетка подбита ?
+
+Допустимые координаты клетки ?
+
+Клетка подбита ?
+
+Допустимые координаты клетки ?
+
+Клетка подбита ?
+
+Допустимые координаты клетки ?
+
+Клетка подбита ?\mbox{\Hypertarget{classship_aeeb7797b1739ee01181f023fdb02c476}\label{classship_aeeb7797b1739ee01181f023fdb02c476}} 
+\index{ship@{ship}!ifdesver@{ifdesver}}
+\index{ifdesver@{ifdesver}!ship@{ship}}
+\doxysubsubsection{\texorpdfstring{ifdesver()}{ifdesver()}}
+{\footnotesize\ttfamily void ship\+::ifdesver (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{dl }\end{DoxyParamCaption})}
+
+
+
+Метод для атаки корабля 
+
+Проверка уничтожен ли горизонтальный корабль
+
+dl Длина корабля абсциса первой клетки корабля
+
+абсциса последней клетки корабля
+
+Проверка клеток слева
+
+Допустимые координаты клетки ?
+
+Клетка подбита ?
+
+Учёт подбитых клеток
+
+Новая абсциса начала корабля
+
+Допустимые координаты клетки ?
+
+Клетка подбита ?
+
+Учёт подбитых клеток
+
+Новая абсциса начала корабля
+
+Допустимые координаты клетки ?
+
+Клетка подбита ?
+
+Учёт подбитых клеток
+
+Новая абсциса начала корабля
+
+Проверка клеток справа
+
+Допустимые координаты клетки ?
+
+Клетка подбита ?
+
+Учёт подбитых клеток
+
+Новая абсциса начала корабля
+
+Допустимые координаты клетки ?
+
+Клетка подбита ?
+
+Учёт подбитых клеток
+
+Новая абсциса начала корабля
+
+Допустимые координаты клетки ?
+
+Клетка подбита ?
+
+Учёт подбитых клеток
+
+Новая абсциса начала корабля
+
+Рамка из точек убитого корабля
+
+Убит?
+
+Допустимые координаты клетки ?
+
+Клетка подбита ?
+
+Допустимые координаты клетки ?
+
+Клетка подбита ?
+
+Допустимые координаты клетки ?
+
+Клетка подбита ?
+
+Допустимые координаты клетки ?
+
+Клетка подбита ?
+
+Допустимые координаты клетки ?
+
+Клетка подбита ?
+
+Допустимые координаты клетки ?
+
+Клетка подбита ?
+
+Допустимые координаты клетки ?
+
+Клетка подбита ?
+
+Допустимые координаты клетки ?
+
+Клетка подбита ?
+
+Допустимые координаты клетки ?
+
+Допустимые координаты клетки ?
+
+Клетка подбита ?
+
+Допустимые координаты клетки ?
+
+Клетка подбита ?
+
+Допустимые координаты клетки ?
+
+Клетка подбита ?
+
+Допустимые координаты клетки ?
+
+Клетка подбита ?
+
+Допустимые координаты клетки ?
+
+Клетка подбита ?\mbox{\Hypertarget{classship_a8ee9aebe392888b2cb73b81f0bee92aa}\label{classship_a8ee9aebe392888b2cb73b81f0bee92aa}} 
+\index{ship@{ship}!oprdl@{oprdl}}
+\index{oprdl@{oprdl}!ship@{ship}}
+\doxysubsubsection{\texorpdfstring{oprdl()}{oprdl()}}
+{\footnotesize\ttfamily int ship\+::oprdl (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{rot }\end{DoxyParamCaption})}
+
+
+
+Проверка уничтожен ли вертикальный корабль 
+
+Определение длины корабля Начальная длинна
+
+Проверка корабль справа
+
+Горизонтальный корабль справа ?
+
+Допустимые координаты клетки ?
+
+Занята клетка ?
+
+Увелечение длинны корабля
+
+Допустимые координаты клетки ?
+
+Занята клетка ?
+
+Увелечение длинны корабля
+
+Допустимые координаты клетки ?
+
+Занята клетка ?
+
+Проверка корабль слева
+
+Горизонтальный корабль слева ?
+
+Допустимые координаты клетки ?
+
+Занята клетка ?
+
+Увелечение длинны корабля
+
+Допустимые координаты клетки ?
+
+Занята клетка ?
+
+Увелечение длинны корабля
+
+Допустимые координаты клетки ?
+
+Занята клетка ?
+
+Увелечение длинны корабля
+
+Проверка корабль сверху
+
+Вертикальный корабль сверху ?
+
+Допустимые координаты клетки ?
+
+Занята клетка ?
+
+Увелечение длинны корабля
+
+Допустимые координаты клетки ?
+
+Занята клетка ?
+
+Увелечение длинны корабля
+
+Допустимые координаты клетки ?
+
+Занята клетка ?
+
+Увелечение длинны корабля
+
+Проверка корабль снизу
+
+Вертикальный корабль сверху ?
+
+Допустимые координаты клетки ?
+
+Занята клетка ?
+
+Увелечение длинны корабля
+
+Допустимые координаты клетки ?
+
+Занята клетка ?
+
+Увелечение длинны корабля
+
+Допустимые координаты клетки ?
+
+Занята клетка ?
+
+Увелечение длинны корабля\mbox{\Hypertarget{classship_aba28c9a4aee0c3a890154cd879a30d61}\label{classship_aba28c9a4aee0c3a890154cd879a30d61}} 
+\index{ship@{ship}!prvk@{prvk}}
+\index{prvk@{prvk}!ship@{ship}}
+\doxysubsubsection{\texorpdfstring{prvk()}{prvk()}}
+{\footnotesize\ttfamily int ship\+::prvk (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Определение вертикальный/горизонтальный корабль 
+
+Проверка на правильность расстановки корабля Корабли раставлены неверно
+
+Допустимые координаты клетки ?
+
+Клетка признак дистанции
+
+Корабли раставлены правильно
+
+Корабли раставлены правильно
+
+Допустимые координаты клетки ?
+
+Клетка признак дистанции
+
+Корабли раставлены правильно
+
+Допустимые координаты клетки ?
+
+Клетка признак дистанции
+
+Корабли раставлены правильно
+
+Допустимые координаты клетки ?
+
+Клетка признак дистанции
+
+Корабли раставлены правильно
+
+Допустимые координаты клетки ?
+
+Клетка признак дистанции
+
+Корабли раставлены правильно
+
+Допустимые координаты клетки ?
+
+Клетка признак дистанции
+
+Корабли раставлены правильно
+
+Допустимые координаты клетки ?
+
+Клетка признак дистанции
+
+Корабли раставлены правильно
+
+Допустимые координаты клетки ?
+
+Клетка признак дистанции
+
+Корабли раставлены правильно
+
+Допустимые координаты клетки ?
+
+Клетка признак дистанции
+
+Корабли раставлены правильно\mbox{\Hypertarget{classship_a66ff8165d3d742a7ac9b9d4a2e778276}\label{classship_a66ff8165d3d742a7ac9b9d4a2e778276}} 
+\index{ship@{ship}!rotation@{rotation}}
+\index{rotation@{rotation}!ship@{ship}}
+\doxysubsubsection{\texorpdfstring{rotation()}{rotation()}}
+{\footnotesize\ttfamily int ship\+::rotation (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Определение длины корабля 
+
+определение вертикальный/горизонтальный корабль единичный корабль
+
+Или сверху непустая клетка
+
+Или снизу непустая клетка
+
+Горизонтальный корабль
+
+Или справа непустая клетка
+
+Или слева непустая клетка
+
+Вертикальный корабль\mbox{\Hypertarget{classship_aa14e876b350fe17e18c87e552a298876}\label{classship_aa14e876b350fe17e18c87e552a298876}} 
+\index{ship@{ship}!set\_isai@{set\_isai}}
+\index{set\_isai@{set\_isai}!ship@{ship}}
+\doxysubsubsection{\texorpdfstring{set\_isai()}{set\_isai()}}
+{\footnotesize\ttfamily void ship\+::set\+\_\+isai (\begin{DoxyParamCaption}\item[{bool}]{flag }\end{DoxyParamCaption})}
+
+
+
+Установка данного поля для компьютера 
+
+Признак владения поля компьютером\mbox{\Hypertarget{classship_a6c6da520a3d3e4e27da871f7a6c152d6}\label{classship_a6c6da520a3d3e4e27da871f7a6c152d6}} 
+\index{ship@{ship}!set\_name@{set\_name}}
+\index{set\_name@{set\_name}!ship@{ship}}
+\doxysubsubsection{\texorpdfstring{set\_name()}{set\_name()}}
+{\footnotesize\ttfamily void ship\+::set\+\_\+name (\begin{DoxyParamCaption}\item[{QString}]{n\+\_\+str }\end{DoxyParamCaption})}
+
+
+
+Получение имени игрока 
+
+\mbox{\Hypertarget{classship_a6e7292cae19c7c3b442813abedd32eb3}\label{classship_a6e7292cae19c7c3b442813abedd32eb3}} 
+\index{ship@{ship}!setmas@{setmas}}
+\index{setmas@{setmas}!ship@{ship}}
+\doxysubsubsection{\texorpdfstring{setmas()}{setmas()}}
+{\footnotesize\ttfamily void ship\+::setmas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Проверка кому принадлежит поле 
+
+Расстановка кораблей Очистка поля
+
+Для всех длин кораблей
+
+Для всех кораблей этой длинны
+
+Поставить корабль I длинны\mbox{\Hypertarget{classship_aa8659eb060c7a57a67b2ba2b7f56f5fe}\label{classship_aa8659eb060c7a57a67b2ba2b7f56f5fe}} 
+\index{ship@{ship}!setrandom@{setrandom}}
+\index{setrandom@{setrandom}!ship@{ship}}
+\doxysubsubsection{\texorpdfstring{setrandom()}{setrandom()}}
+{\footnotesize\ttfamily void ship\+::setrandom (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+Расстановка кораблей 
+
+Расстановка корабля длинны I случайным образом Признак \char`\"{}Продолжения установки\char`\"{}
+
+ПОКА Продолжать
+
+Генерация случайных координат
+
+Координаты допустимы?
+
+Получение случайной ориентации
+
+Очистка результата проверки
+
+Вертикальны ориентация ?
+
+Хватает свободных клеток?
+
+Заполнить клетки
+
+Поставить признаком корабля
+
+Сбросить признак продолжения
+
+Очистка результата проверки
+
+Хватает свободных клеток?
+
+Заполнить клетки
+
+Поставить признаком корабля
+
+Сбросить признак продолжения
+
+Вертикальной ориентация ?
+
+Очистка результата проверки
+
+Хватает свободных клеток?
+
+Заполнить клетки
+
+Поставить признаком корабля
+
+Сбросить признак продолжения
+
+Очистка результата проверки
+
+Хватает свободных клеток?
+
+Заполнить клетки
+
+Поставить признаком корабля
+
+Сбросить признак продолжения\mbox{\Hypertarget{classship_a3daa12f88a96a85ff50d56856156f6d4}\label{classship_a3daa12f88a96a85ff50d56856156f6d4}} 
+\index{ship@{ship}!ship\_erase@{ship\_erase}}
+\index{ship\_erase@{ship\_erase}!ship@{ship}}
+\doxysubsubsection{\texorpdfstring{ship\_erase()}{ship\_erase()}}
+{\footnotesize\ttfamily void ship\+::ship\+\_\+erase (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Проверка остатка кораблей 
+
+Удаление кораблей. Очистка клетки
+
+Инициализация переменных игры\mbox{\Hypertarget{classship_a1176b65980ab0218016922400dcb534d}\label{classship_a1176b65980ab0218016922400dcb534d}} 
+\index{ship@{ship}!step\_inc@{step\_inc}}
+\index{step\_inc@{step\_inc}!ship@{ship}}
+\doxysubsubsection{\texorpdfstring{step\_inc()}{step\_inc()}}
+{\footnotesize\ttfamily void ship\+::step\+\_\+inc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Чтение номер хода 
+
+Инкремент номера шага \mbox{\Hypertarget{classship_a260a9f74a3848db7ec5aa0dab045f8bb}\label{classship_a260a9f74a3848db7ec5aa0dab045f8bb}} 
+\index{ship@{ship}!valid@{valid}}
+\index{valid@{valid}!ship@{ship}}
+\doxysubsubsection{\texorpdfstring{valid()}{valid()}}
+{\footnotesize\ttfamily int ship\+::valid (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Проверка на правильность расстановки корабля 
+
+Проверка на принадлежность клетки полю. Координаты клетки допустимы
+
+Выходит за границы по горизонтали ?
+
+Координаты клетки Недопустимы
+
+Выходит за границы по вертикали ?
+
+Координаты клетки Недопустимы
+
+Результат анализа
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classship_a729cd7a02d1751671c9914337cd37a78}\label{classship_a729cd7a02d1751671c9914337cd37a78}} 
+\index{ship@{ship}!pole@{pole}}
+\index{pole@{pole}!ship@{ship}}
+\doxysubsubsection{\texorpdfstring{pole}{pole}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classpole}{pole}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/Андрей/\+Documents/\+Git\+Hub/\+Sea\+Boys\+Battle\+Foundation\+Of\+Corporation/\+Sea\+\_\+\+Battle\+\_\+2.\+0/\mbox{\hyperlink{ship_8h}{ship.\+h}}\item 
+C\+:/\+Users/Андрей/\+Documents/\+Git\+Hub/\+Sea\+Boys\+Battle\+Foundation\+Of\+Corporation/\+Sea\+\_\+\+Battle\+\_\+2.\+0/\mbox{\hyperlink{ship_8cpp}{ship.\+cpp}}\end{DoxyCompactItemize}

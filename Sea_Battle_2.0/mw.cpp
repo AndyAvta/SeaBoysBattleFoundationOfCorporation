@@ -1,8 +1,8 @@
 ﻿#include "mw.h"
 #include "ui_mw.h"
-//#include <QcoreApplication>
+///#include <QcoreApplication>
 #include <QTextDocument>
-//#include <Ui_MWClass>
+///#include <Ui_MWClass>
 
 MW::MW(QWidget *parent)
     : QMainWindow(parent), ui(new Ui::MWClass)
@@ -23,12 +23,12 @@ MW::~MW()
   delete ui;
  }
 
-void MW::on_pushButton_clicked()       //выход
+void MW::on_pushButton_clicked()       ///выход
  {
   QCoreApplication::exit(1);
  }
 
-void MW::on_pushButton_2_clicked()     //кнопка рестарт
+void MW::on_pushButton_2_clicked()     ///кнопка рестарт
  {
   ui->pole_1->stop=1;
   ui->p_1->setText(QString::fromLocal8Bit("easy"));
@@ -60,7 +60,7 @@ void MW::on_pushButton_2_clicked()     //кнопка рестарт
   update();
  }
 
-void MW::on_pushButton_3_clicked()     // кнопка бой
+void MW::on_pushButton_3_clicked()     /// кнопка бой
  {
   ui->pole_1->stop=0;
   ui->centralWidget->setDisabled(0);
@@ -90,7 +90,7 @@ void MW::on_pushButton_3_clicked()     // кнопка бой
      ui->pole_1->setDisabled(1);
      ui->pole_1->ppstep();
     }
-  //air=game::ai_step(ui->pole_1->ship_1,ui->pole_1->ship_2);
+  ///air=game::ai_step(ui->pole_1->ship_1,ui->pole_1->ship_2);
   if (game::get_hod()==2 &&
       game::get_cbp_2()==0 && 
       game::get_cbp_1()!=0)
@@ -102,7 +102,7 @@ void MW::on_pushButton_3_clicked()     // кнопка бой
       game::get_cbp_2()==0)
     {
      game::hod=rand()%2+1;
-     //while(game::if_win(ui->pole_1->ship_1,ui->pole_1->ship_2)==0)
+     ///while(game::if_win(ui->pole_1->ship_1,ui->pole_1->ship_2)==0)
      ui->pole_1->pcvpc(ui->pole_1->ship_1, ui->pole_1->ship_2);
      update();
      ui->centralWidget->setDisabled(0);
@@ -228,19 +228,19 @@ void MW::on_p_2_textChanged()
   ui->pole_1->ship_2.set_name(ui->p_2->toPlainText());
  }
 
-void MW::on_pushButton_4_clicked()     //кнопка рекорды
+void MW::on_pushButton_4_clicked()     ///кнопка рекорды
  {
   ui->records->tab.reload();
-  if (!i)                              // Надпись Рекорды?
+  if (!i)                              /// Надпись Рекорды?
     {
-     ui->pole_1->setVisible(0);        // Скрыть игровое поле
-     ui->records->setVisible(1);       // Показать таблицу рекордов
+     ui->pole_1->setVisible(0);        /// Скрыть игровое поле
+     ui->records->setVisible(1);       /// Показать таблицу рекордов
      ui->pushButton_4->setText(QString::fromLocal8Bit("Обратно"));
     };
-  if (i)                               // Надпись Обратно?
+  if (i)                               /// Надпись Обратно?
     {
-     ui->pole_1->setVisible(1);        // Показать игровое поле
-     ui->records->setVisible(0);       // Скрыть таблицу рекордов
+     ui->pole_1->setVisible(1);        /// Показать игровое поле
+     ui->records->setVisible(0);       /// Скрыть таблицу рекордов
      ui->pushButton_4->setText(QString::fromLocal8Bit("Рекорды"));
     };
   i=!i;
