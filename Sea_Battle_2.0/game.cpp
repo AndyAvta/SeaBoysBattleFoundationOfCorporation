@@ -26,7 +26,6 @@ void game::reset()
   cbai_23=0;
  }
 
-
 void game::set_cbp_1(bool flag)             // Логин левый
  {
   cbp_1=flag;

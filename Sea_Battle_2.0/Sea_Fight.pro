@@ -17,9 +17,11 @@ HEADERS += mw.h \
     ai.h \
     game.h \
     record.h \
-    record_frame.h
+    record_frame.h \
+    test.h
 FORMS += mw.ui \
     pole.ui \
     record_frame.ui
 QT += widgets
 QT += gui
+QT += testlib
