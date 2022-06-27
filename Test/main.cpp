@@ -3,12 +3,12 @@
 
 #include <QTest>
 #include <QObject>
-#include "ai.h"
-#include "game.h"
+#include "Sea_Battle_2.0\ai.h"
+#include "Sea_Battle_2.0\game.h"
 #include <QFrame>
 #include <QtGui>
-#include <record.h>
-#include "mw.h"
+#include <Sea_Battle_2.0\record.h>
+#include "Sea_Battle_2.0\mw.h"
 #include <qtextcodec.h>
 
 class Test: public QObject
